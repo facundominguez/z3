@@ -347,6 +347,12 @@ namespace api {
         }
     }
 
+    void context::reset_parser_streams(std::string & input) {
+        m_parser_ous.str("");
+        m_parser_is.clear();
+        m_parser_is.str(input);
+    }
+
     // ------------------------
     //
     // RCF manager
